@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff9800;
+}
+
+.logo {
+  color: #ff9800;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #000, #222);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filters button {
+  padding: 8px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #ff9800;
+  color: #000;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s, opacity 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 152, 0, 0.4);
+}
+
+.gallery img.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.lightbox button {
+  position: absolute;
+  background: #ff9800;
+  border: none;
+  padding: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.6rem; }
+  .gallery img { height: 150px; }
+}

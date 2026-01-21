@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">ImageGallery</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Image Gallery</h1>
+    <p></p>
+  </section>
+
+  <section class="container" id="gallery">
+
+    <div class="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="city">City</button>
+      <button data-filter="people">People</button>
+    </div>
+
+    <div class="gallery">
+      <img src="Images/nature1.png" data-category="nature">
+      <img src="Images/nature2.png" data-category="nature">
+      <img src="Images/nature3.png" data-category="nature">
+      <img src="Images/city1.png" data-category="city"> 
+      <img src="Images/city2.png" data-category="city">
+      <img src="Images/city3.png" data-category="city">
+      <img src="Images/people1.png" data-category="people">
+      <img src="Images/people2.png" data-category="people">
+      <img src="Images/people3.png" data-category="people">  
+      </div>
+
+  </section>
+
+  <div class="lightbox">
+    <span class="close">&times;</span>
+    <button class="prev">&#10094;</button>
+    <img id="lightbox-img">
+    <button class="next">&#10095;</button>
+  </div>
+
+  <script src="text.js"></script>
+</body>
+</html>
